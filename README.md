@@ -4,6 +4,8 @@ Aplikasi manajemen parkir **Tirta Tamansari**, dibangun dengan PHP native + MySQ
 dan tampilan Bootstrap 5, mengikuti struktur folder yang diminta serta ketentuan soal
 **Uji Kompetensi Keahlian - Pengembangan Aplikasi Parkir (KM25.4.1.1)**.
 
+live demo: https://website-parkir.infinityfreeapp.com/?i=1  Wireframe: https://canva.link/0ggd3oba0vma0in
+
 ## 1. Struktur Folder
 
 ```
