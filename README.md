@@ -156,6 +156,8 @@ notifikasi, dan pengajuan aktivasi, antara lain: `tb_user`, `tb_kendaraan`, `tb_
    Login tamu
    username: tamu
    password: tamu123
+
+
 ---
 Dibuat sesuai kerangka struktur project yang diberikan, untuk memenuhi ketentuan
 Soal Praktik Kejuruan "Pengembangan Aplikasi Parkir" (Paket 2, RPL 2025/2026),
