@@ -4,9 +4,8 @@ Aplikasi manajemen parkir **Tirta Tamansari**, dibangun dengan PHP native + MySQ
 dan tampilan Bootstrap 5, mengikuti struktur folder yang diminta serta ketentuan soal
 **Uji Kompetensi Keahlian - Pengembangan Aplikasi Parkir (KM25.4.1.1)**.
 
-live demo: https://website-parkir.infinityfreeapp.com/?i=1  Wireframe: https://canva.link/0ggd3oba0vma0in
-
-## 1. Struktur Folder
+Wireframe: [https://canva.link/0ggd3oba0vma0in](https://canva.link/0ggd3oba0vma0in)
+live demo: [https://website-parkir.infinityfreeapp.com/?i=1](https://website-parkir.infinityfreeapp.com/?i=1)
 
 ```
 parkir/
@@ -83,11 +82,11 @@ parkir/
 
 ## 3. Akun Default (Seeder)
 
-| Role     | Username  | Password |
-|----------|-----------|----------|
-| Admin    | admin     | 12345    |
-| Petugas  | petugas1  | 12345    |
-| Owner    | owner1    | 12345    |
+| Role     | Username  | Password  |
+|----------|-----------|---------- |
+| Admin    | admin     | admin123  |
+| Petugas  | petugas1  | petugas123|
+| Owner    | owner1    | owner123  |
 
 Segera ubah password melalui menu **Kelola User** / edit profil setelah login pertama kali.
 Akun **Member** dapat didaftarkan sendiri melalui halaman **register** atau melalui alur
@@ -141,24 +140,6 @@ notifikasi, dan pengajuan aktivasi, antara lain: `tb_user`, `tb_kendaraan`, `tb_
    tanggal tertentu, lengkap dengan opsi cetak.
 6. Pengunjung di halaman utama (`index.php`) dapat melihat testimoni yang sudah disetujui
    Admin dan mengirim testimoni baru melalui `testimoni_submit.php`.
-
-## 7. Username & password login
-   Login admin
-   username: admin
-   password: admin123
-
-   Login petugas
-   username: petugas
-   password: petugas123
-
-   Login owner
-   username: owner
-   password: owner123
-
-   Login tamu
-   username: tamu
-   password: tamu123
-
 
 ---
 Dibuat sesuai kerangka struktur project yang diberikan, untuk memenuhi ketentuan
