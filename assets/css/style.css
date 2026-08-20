@@ -1,0 +1,252 @@
+/* =====================================================
+   PARKIR TIRTA TAMANSARI — Tema disamakan dengan Landing Page
+   Dominasi Warna: Navy Gelap, Aqua & Violet (selaras index.php)
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap');
+
+:root {
+    /* SELARAS DENGAN LANDING PAGE (index.php) */
+    --tirta-dark: #070b1a;         /* --ink pada landing page */
+    --tirta-dark-2: #101b3d;       /* --deep pada landing page */
+    --tirta-teal: #2fe6c8;         /* --aqua pada landing page */
+    --tirta-teal-dark: #1ba893;    /* --aqua-dim pada landing page */
+    --tirta-aqua-light: #eef1f6;   /* --stone pada landing page */
+
+    /* Aksen Violet & Brass (selaras landing page) */
+    --tirta-gold: #f2b84b;         /* --brass pada landing page */
+    --tirta-accent: #8b7cfa;       /* --violet pada landing page */
+
+    /* Latar Belakang & Teks */
+    --tirta-light: #eef1f6;
+    --tirta-muted: #566178;
+
+    --font-heading: 'Space Grotesk', 'Georgia', serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    /* CATATAN: --sidebar-width & semua aturan lebar/offset sidebar
+       (.app-wrapper, .tirta-sidebar, .main-content margin-left, dsb)
+       SUDAH DIPINDAH SELURUHNYA ke sidebar_admin.php supaya cuma ada
+       SATU sumber kebenaran untuk layout. Jangan tambahkan lagi rule
+       margin-left/width untuk sidebar/main-content di file ini —
+       kalau ditambah lagi, akan kembali jadi rebutan !important
+       yang hasilnya tergantung urutan <link>/<style>, persis bug
+       "kepotong" & grafik salah ukur yang kemarin terjadi. */
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background: var(--tirta-light);
+    font-family: var(--font-body);
+    color: #0d1b2a;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page-title {
+    font-family: var(--font-heading);
+}
+
+/* ============================================================
+   TOPBAR & HEADER DISESUAIKAN
+   ============================================================ */
+.tirta-topbar, .tp-topbar {
+    background: #ffffff;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(7, 11, 26, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.tp-topbar .page-title, h1.page-title {
+    font-size: 1.4rem;
+    color: var(--tirta-dark);
+    margin: 0;
+}
+
+/* ============================================================
+   KARTU STATISTIK
+   ============================================================ */
+.tirta-body, .tp-body { padding: 28px; }
+
+.stat-card {
+    border: none;
+    border-radius: 18px;
+    padding: 22px;
+    color: #ffffff !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(7, 11, 26, 0.15);
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* FIX: garis putih di bawah kartu dihapus total — sebelumnya
+   .stat-card::before menampilkan strip 4px rgba(255,255,255,.25)
+   yang di layar terlihat seperti border putus-putus/dashed. */
+.stat-card::before {
+    content: none;
+    display: none;
+}
+
+.stat-card .stat-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+}
+
+/* FIX: dipastikan h3/label/p di dalam SEMUA varian .stat-card (termasuk
+   bg-grad-dark) selalu putih, walau ada CSS lain yang mencoba menimpa
+   dengan warna teks default/gelap. */
+.stat-card h3,
+.stat-card span.label,
+.stat-card p,
+.bg-grad-red.stat-card h3, .bg-grad-red.stat-card span.label,
+.bg-grad-orange.stat-card h3, .bg-grad-orange.stat-card span.label,
+.bg-grad-dark.stat-card h3, .bg-grad-dark.stat-card span.label,
+.bg-grad-green.stat-card h3, .bg-grad-green.stat-card span.label,
+.bg-grad-info.stat-card h3, .bg-grad-info.stat-card span.label,
+.bg-grad-blue.stat-card h3, .bg-grad-blue.stat-card span.label {
+    color: #ffffff !important;
+}
+
+.stat-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 8px 0 2px 0;
+}
+
+.stat-card span.label, .stat-card p {
+    font-size: .85rem;
+    opacity: .95;
+    margin: 0;
+}
+
+/* Variasi Warna Kartu — selaras palet Landing Page (aqua / violet / brass / navy) */
+.bg-grad-red { background: linear-gradient(135deg, #8b7cfa 0%, #6a5ce0 100%); }
+.bg-grad-orange { background: linear-gradient(135deg, #f2b84b 0%, #d99a2b 100%); }
+.bg-grad-dark { background: linear-gradient(135deg, #101b3d 0%, #070b1a 100%); }
+.bg-grad-green, .bg-grad-info { background: linear-gradient(135deg, #2fe6c8 0%, #1ba893 100%); }
+.bg-grad-blue { background: linear-gradient(135deg, #1ba893 0%, #101b3d 100%); }
+
+/* ============================================================
+   RETINT WARNA BOOTSTRAP (Primary/Info/Warning) — Selaras Landing Page
+   Supaya btn-primary, badge bg-primary/info/warning, link, dsb ikut tema
+   ============================================================ */
+:root {
+    --bs-primary: #1ba893;
+    --bs-primary-rgb: 27, 168, 147;
+    --bs-primary-text-emphasis: #0e544a;
+    --bs-primary-bg-subtle: #d9f5f0;
+    --bs-primary-border-subtle: #7fe0cc;
+
+    --bs-info: #2fe6c8;
+    --bs-info-rgb: 47, 230, 200;
+    --bs-info-text-emphasis: #0e544a;
+    --bs-info-bg-subtle: #e3faf6;
+    --bs-info-border-subtle: #a0f0e2;
+
+    --bs-warning: #f2b84b;
+    --bs-warning-rgb: 242, 184, 75;
+    --bs-warning-text-emphasis: #7a5410;
+    --bs-warning-bg-subtle: #fdf1dc;
+    --bs-warning-border-subtle: #f6d999;
+
+    --bs-link-color: #1ba893;
+    --bs-link-hover-color: #158071;
+    --bs-link-color-rgb: 27, 168, 147;
+}
+
+.btn-primary {
+    --bs-btn-bg: #1ba893;
+    --bs-btn-border-color: #1ba893;
+    --bs-btn-hover-bg: #158071;
+    --bs-btn-hover-border-color: #158071;
+    --bs-btn-active-bg: #158071;
+    --bs-btn-active-border-color: #158071;
+    --bs-btn-disabled-bg: #1ba893;
+    --bs-btn-disabled-border-color: #1ba893;
+}
+
+/* ============================================================
+   ISI DASHBOARD (CARD, TABEL, FORM) — AGAR TIDAK POLOS PUTIH
+   ============================================================ */
+
+/* Kartu diberi bayangan lembut & sudut membulat, tidak lagi datar */
+.card {
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 6px 22px rgba(7, 11, 26, 0.08);
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%);
+    border-bottom: 1px solid var(--tirta-aqua-light);
+    font-family: var(--font-heading);
+}
+
+.card-header.bg-white,
+.card-header.bg-primary-subtle,
+.card-header.bg-warning-subtle {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%) !important;
+    border-bottom: 3px solid var(--tirta-teal) !important;
+    color: var(--tirta-dark) !important;
+}
+
+/* Header tabel — navy gelap + teks putih, senada sidebar */
+.table thead th {
+    background: linear-gradient(180deg, #101b3d 0%, #070b1a 100%) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    font-weight: 600;
+    letter-spacing: .3px;
+    vertical-align: middle;
+}
+
+.table.table-hover tbody tr:hover {
+    background: rgba(47, 230, 200, 0.07);
+}
+
+.table:not(.table-sm) > :not(caption) > * > * {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+/* Form: fokus input memakai warna aksen aqua, bukan biru default */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--tirta-teal);
+    box-shadow: 0 0 0 .25rem rgba(47, 230, 200, .18);
+}
+
+/* Progress bar & spinner ikut warna aksen */
+.progress-bar {
+    background-color: var(--tirta-teal-dark);
+}
+
+/* Pagination ikut warna aksen */
+.page-link {
+    color: var(--tirta-teal-dark);
+}
+.page-item.active .page-link {
+    background-color: var(--tirta-teal-dark);
+    border-color: var(--tirta-teal-dark);
+}
+
+/* Modal header sedikit ditegaskan */
+.modal-header {
+    border-bottom: 3px solid var(--tirta-teal);
+}
