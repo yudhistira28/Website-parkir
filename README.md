@@ -140,6 +140,22 @@ notifikasi, dan pengajuan aktivasi, antara lain: `tb_user`, `tb_kendaraan`, `tb_
 6. Pengunjung di halaman utama (`index.php`) dapat melihat testimoni yang sudah disetujui
    Admin dan mengirim testimoni baru melalui `testimoni_submit.php`.
 
+## 7. Username & password login
+   Login admin
+   username: admin
+   password: admin123
+
+   Login petugas
+   username: petugas
+   password: petugas123
+
+   Login owner
+   username: owner
+   password: owner123
+
+   Login tamu
+   username: tamu
+   password: tamu123
 ---
 Dibuat sesuai kerangka struktur project yang diberikan, untuk memenuhi ketentuan
 Soal Praktik Kejuruan "Pengembangan Aplikasi Parkir" (Paket 2, RPL 2025/2026),
